@@ -15,7 +15,7 @@ export class EditUserComponent implements OnInit{
   form: FormGroup;
 
   userId: any;
-  userData: User = { name: '', email: '', role: '', surname: '', password: '' };
+  userData: User = { name: '', email: '', role: '', surname: '', password: '', state:'' };
   showMessage = false;
 
   constructor(private route: ActivatedRoute, private userService: UserService, private _fb: FormBuilder, 
@@ -25,6 +25,7 @@ export class EditUserComponent implements OnInit{
       "surname": ['', Validators.required],
       "email": ['', Validators.required],
       "role": ['', Validators.required],
+      "state": ['', Validators.required]
     })
   }
 

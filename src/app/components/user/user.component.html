@@ -13,6 +13,9 @@
               <th>
                 <button class="btn-add" (click)="addUser()">Add user</button>
               </th>
+           
+                
+           
             </tr>
           </thead>
           <tbody>
@@ -23,6 +26,7 @@
               <td>{{user.role}}</td>
               <td>
                 <button (click)="passUser(user)" class="btn-success">Edit</button>
+                <button class="btn-state" (click)="seeState(user)">See state</button>
                 <button (click)="confirmDelete(user._id)" class="btn-danger">Delete</button>
               </td>
             </tr>

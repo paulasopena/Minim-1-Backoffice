@@ -1,0 +1,20 @@
+<app-navigation></app-navigation>
+<h1>Edit User</h1>
+
+<form [formGroup]="form">
+  <div>
+    <label for="indicator">Indicator:</label>
+    <input type="text" id="indicator" name="indicator" formControlName="indicator" required>
+  </div>
+  <div>
+    <label for="available">Availability:</label>
+    <input type="number" id="available" name="available" formControlName="available" required>
+  </div>
+  <div>
+    <label for="date">Date:</label>
+    <input type="text" id="last_updated" name="last_updated" formControlName="last_updated" required>
+  </div>
+
+  <button type="submit" (click)="editState()">Save</button>
+  <div *ngIf="showMessage" style="font-style: italic;">Changes were made correctly</div>
+</form>

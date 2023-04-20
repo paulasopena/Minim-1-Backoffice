@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { User } from '../models/user';
 import { TokenStorage } from './token-storage.service';
+import { State } from '../models/state';
 
 
 @Injectable({
@@ -40,5 +41,9 @@ export class UserService {
 
   updateUser(id: string, user: User): Observable<User> {
     return this.http.put<User>(this.url + '/' + id, user);
+  }
+  getStates(id: any): Observable<User>{
+    return this.http.get<User>(this.url + '/states/' + id);
+
   }
 }

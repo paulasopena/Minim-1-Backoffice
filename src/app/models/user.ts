@@ -1,3 +1,4 @@
+import { State } from "./state";
 export interface User {
     _id?: any;
     name: string;
@@ -5,4 +6,5 @@ export interface User {
     email: string;
     password: string;
     role: string; 
+    state: string | State;
 }

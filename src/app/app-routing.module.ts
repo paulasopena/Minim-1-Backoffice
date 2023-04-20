@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './components/login/login.component';
-
+import { AllstatesComponent } from './components/allstates/allstates.component';
 import { EditOrganizationComponent } from './components/edit-organization/edit-organization.component';
 import { OrganizationComponent } from './components/organization/organization.component';
-
+import { StateComponent } from './components/state/state.component';
 import { UserComponent } from './components/user/user.component';
 import { ActComponent } from './components/act/act.component';
 import { AddActComponent } from './components/act-post/act-post.component';
@@ -48,6 +48,16 @@ const routes: Routes = [
   {
     path: 'act',
     component: AddActComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'state/:id',
+    component: StateComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'allstates',
+    component: AllstatesComponent,
     canActivate: [AuthGuard]
   },
   {

@@ -1,0 +1,27 @@
+<app-navigation></app-navigation>
+<div class="container app">
+  <div class="row">
+      <div class="col-sm-8">
+        <h2>States List </h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Indicator</th>
+              <th>Available</th>
+              <th>Date</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let state of states; let i = index">
+              <td>{{state.indicator}}</td>
+              <td>{{state.available}}</td>
+              <td>{{state.last_updated}}</td>
+              
+            </tr>
+          </tbody>
+          
+        </table>
+      </div>
+  </div>
+</div>

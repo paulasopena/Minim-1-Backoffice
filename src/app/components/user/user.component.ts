@@ -55,10 +55,15 @@ export class UserComponent implements OnInit{
       }
     });
   }
+  seeState(user: any) {
+    this._router.navigate(['/state/' + user._id]);
+    console.log(user._id);
+  }
 
   addUser(){
     this._router.navigate(['/user']);
   }
+  
 
   prevPage() {
     this.currentPage = this.currentPage - 1; 
