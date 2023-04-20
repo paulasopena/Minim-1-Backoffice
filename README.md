@@ -6,3 +6,7 @@
 2. Editar el estat d'aquest usuari, i es guarda bé en la base de dades si es modifica un camp en el backoffice.
 3. Agafar tots els estats disponibles i es mostren en una taula, com es mostren els usuaris i els altres models.
 
+
+
+-> es el component de state posa edit user pero no es edit user sino que es un fallo tipográfic, simplement es see state del usuari clicat
+
